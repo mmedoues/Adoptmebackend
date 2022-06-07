@@ -14,5 +14,5 @@ const UserSchema = new Schema ({
 })
 
 
-module.exports = User = model('Animal', UserSchema)
+module.exports = Animal = model('Animal', UserSchema)
                                                               

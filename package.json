@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mohame0136/RESTAPI.git"
+    "url": "git+https://github.com/Mohame0136/Adoptmebackend.git"
   },
   "author": "med",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mohame0136/RESTAPI/issues"
+    "url": "https://github.com/Mohame0136/Adoptmebackend/issues"
   },
-  "homepage": "https://github.com/Mohame0136/RESTAPI#readme",
+  "homepage": "https://github.com/Mohame0136/Adoptmebackend#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",

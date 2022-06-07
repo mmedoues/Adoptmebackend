@@ -4,12 +4,12 @@ exports.addAnimal = async (req,res) => {
 
     try{
     
-        const findContact = await animal.findOne({name:req.body.name})
-        if(findContact){
+        const findAnimal = await animal.findOne({name:req.body.name})
+        if(findAnimal){
             return res.status(400).send({msg:`the animal : ${req.body.name} already exists`})
         }
-        const newContact= new animal(req.body)
-        await newContact.save() 
+        const newAnimal= new animal(req.body)
+        await newAnimal.save() 
         res.status(200).send({msg:`animal : ${req.body} added succesfully`})
     }
     catch(err){
@@ -46,8 +46,8 @@ exports.updateAnimal = async (req,res)=> {
 exports.deleteAnimal = async (req,res)=> {
 
     try{
-        const deletedcontact = await animal.deleteOne({_id:req.params.id})
-        res.status(200).send({msg:'contact deleted ',deletedcontact})
+        const deletedAnimal = await animal.deleteOne({_id:req.params.id})
+        res.status(200).send({msg:'Animal deleted ',deletedAnimal})
 
     }
     catch(err){
@@ -61,8 +61,8 @@ exports.deleteAnimal = async (req,res)=> {
 exports.getOneAnimal = async (req,res)=> {
 
     try{
-        const oneContact = await animal.findById(req.params.id)
-        res.status(200).send({msg:'contact found ',oneContact})
+        const oneAnimal = await animal.findById(req.params.id)
+        res.status(200).send({msg:'Animal found ',oneAnimal})
     }
     catch(err){
         res.status(500).send(err)
