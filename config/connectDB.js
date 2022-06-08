@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 
 const connectDB = async () => {
+    URI="mongodb+srv://newproject:newproject@cluster1.w5d4b.mongodb.net/contactss?retryWrites=true&w=majority"
     try{
-        await mongoose.connect(process.env.MONGO_URI)
+        await mongoose.connect(URI)
         console.log('connected to Database')
 
     }
