@@ -8,7 +8,7 @@ const {
     registerValidator,
     loginValidator,
     validation,
-  } = require('../middleware/userValidator')
+  } = require('../middleware/UserValidator')
 
   const express = require('express')
   const isAuth = require('../middleware/isAuth')
