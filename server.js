@@ -17,5 +17,7 @@ app.use('/api/animals',Animalrouter)
 
 connectDB()
 
-app.listen(6000,(err) => err ? console.log('error!',err) : console.log(`server is running on port : 6000`))
-
+PORT = 5000;
+app.listen(process.env.PORT || PORT, (err) => {
+    err ? console.log(err) : console.log(`server is running on ${PORT}`);
+});
