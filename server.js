@@ -11,6 +11,10 @@ const User = require('./models/User')
 app.use(cors())
 app.use(express.json())
 
+app.use('/',router.get('/', (req, res) => {
+    res.send({ message: 'routing works perfectly'})
+  }) )
+
 app.use('/api/users',usersrouter)
 app.use('/api/animals',Animalrouter)
 
