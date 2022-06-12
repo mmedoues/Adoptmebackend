@@ -6,7 +6,9 @@ const isAuth = require('../middleware/isAuth')
 const admin = require('../middleware/admin')
 
 //get
-
+router.get('/', (req, res) => {
+    res.send({ message: 'you are in the animals router'})
+  })
 router.get('/allAnimals',isAuth,getAllAnimals)
 router.get('/oneAnimal/:id',isAuth,admin,getOneAnimal)
 
