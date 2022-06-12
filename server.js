@@ -7,12 +7,14 @@ const connectDB = require('./config/connectDB')
 const usersrouter = require('./routes/User')
 const Animalrouter = require('./routes/Animal')
 const User = require('./models/User')
+const router = express.Router()
+
 
 app.use(cors())
 app.use(express.json())
 
-app.use('/', (req, res) => {
-    res.send({ message: 'routing works perfectly'})
+app.use('/', router.get('/', (req, res) => {
+    res.send({ message: 'welcome to adoptme'})
   }) )
 
 app.use('/api/users',usersrouter)
