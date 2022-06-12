@@ -11,7 +11,7 @@ const User = require('./models/User')
 app.use(cors())
 app.use(express.json())
 
-app.use('/',router.get('/', (req, res) => {
+app.use('/', (req, res) => {
     res.send({ message: 'routing works perfectly'})
   }) )
 
