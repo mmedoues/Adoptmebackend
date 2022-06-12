@@ -13,6 +13,9 @@ const router = express.Router()
 app.use(cors())
 app.use(express.json())
 
+router.get('/', (req, res) => {
+    res.send({ message: 'welcome to adoptme'})
+  })
 
 app.use('/api/users',usersrouter)
 app.use('/api/animals',Animalrouter)
