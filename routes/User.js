@@ -17,7 +17,7 @@ const {
 
   // testing route
   router.get('/', (req, res) => {
-    res.send({ message: 'test routing' })
+    res.send({ message: 'routing works perfectly'})
   })
   // register
   router.post('/register', registerValidator(), validation, Register)
